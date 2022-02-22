@@ -217,4 +217,17 @@ for example: to install MySQL and GD extensions, you would run the following com
 
 ## MySQL
 
+1- install mysql : 
 
+    sudo apt install mysql-server
+    
+2- Securing MySQL : 
+
+    sudo mysql_secure_installation
+    
+3- to re-enable the service to start up at boot :
+
+        sudo systemctl enable mysql
+
+ #### check if mysql service  is running :
+     sudo systemctl status mysql
