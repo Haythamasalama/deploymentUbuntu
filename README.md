@@ -128,7 +128,8 @@ Managing the Nginx Process :
     sudo systemctl restart  nginx
     sudo systemctl reload  nginx
 
-
+  #### More Info :
+       https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04#step-1-installing-nginx
 
 ## NodeJs
 
