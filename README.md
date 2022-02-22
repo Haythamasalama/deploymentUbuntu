@@ -131,8 +131,16 @@ Managing the Nginx Process :
   #### More Info :
        https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04#step-1-installing-nginx
 
+
 ## NodeJs
 
+  1- install nodejs :
+  
+    sudo apt install nodejs
+    
+ #### check node version and if it install successfully
+    node -v 
+    node –version
 
 ## Git
 
