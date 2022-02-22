@@ -147,10 +147,11 @@ Managing the Nginx Process :
   1- install Git :
   
     sudo apt-get install git
-    
- #### check node version and if it install successfully
+
+ #### check git version and if it install successfully
+ 
       git --version
-    
+      
 2- to configure your Git username and email using  :
 
      git config --global user.name "Haytham Salama"
