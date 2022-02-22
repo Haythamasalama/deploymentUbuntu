@@ -84,11 +84,11 @@
  
     sudo systemctl enable x11vnc.service
 
- 8- to re-enable the service to start up at boot 
+ 8- to start the service :
    
     sudo systemctl start x11vnc.service
 
- #### check if ssh service is running :
+ #### check if x11vnc service  is running :
 
     sudo systemctl status x11vnc.service
 
@@ -113,7 +113,7 @@
     sudo ufw allow 'Nginx HTTP'
 
 
- #### check if ssh service is running    
+ #### check if nginx service is running    
     systemctl status nginx
 
   
