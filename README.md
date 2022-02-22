@@ -206,9 +206,9 @@ for example: to install MySQL and GD extensions, you would run the following com
 
     sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
- #### check if php8 service is running 
+ #### check if composer if it install successfully
  
-     systemctl status php8.0-fpm
+     composer
       
  
   #### More Info :
