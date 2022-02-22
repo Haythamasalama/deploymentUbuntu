@@ -11,38 +11,31 @@
 
 ## Before install 
 
- ``ssh 
-  sudo apt-get install openssh-server
-  ``
+
+    sudo apt-get install openssh-server
+
 
 ## SSH
   
-  Install SSH server in Ubuntu :
+  1- install SSH server in Ubuntu :
   
+    sudo apt-get install openssh-server
   
-  1- ``ssh 
-  sudo apt-get install openssh-server
-  ``
+   2 - to re-enable the service to start up at boot 
   
-  2- ``ssh 
-sudo systemctl enable ssh
-  ``
+    sudo systemctl enable ssh
 
- 3- ``ssh 
-sudo systemctl start ssh
-  ``
-  
-   4- ``ssh 
-  ssh user@server-name  
-  ``
-  
-    For example  : haythamasalama@192.168.0.1 or  haytham@hp-pc
-    
- #### Check if ssh service is running :     
+   3 - to start the service :
 
-   ``ssh 
- sudo systemctl status ssh
-  ``
+     sudo systemctl start ssh
+  
+  4  haythamasalama@192.168.0.1 or  haytham@hp-pc
+  
+    ssh user@server-name  
+  
+ #### to check if ssh service is running :     
+
+    sudo systemctl status ssh
   
   #### More Info :
     https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/
@@ -50,21 +43,21 @@ sudo systemctl start ssh
      
 ## VNC
 
-  1- ``ssh 
-sudo apt install lightdm
-  ``
+  1- install lightdm :
+   
+    sudo apt install lightdm
   
-  2- ``ssh 
-sudo reboot
-  ``
+  2- reboot :
 
- 3- ``ssh 
-sudo apt install x11vnc
-  ``
+    sudo reboot
+
+ 3- install x11vnc :
+
+    sudo apt install x11vnc
   
-   4- ``ssh 
-sudo nano /lib/systemd/system/x11vnc.service
-  ``
+   4
+  
+    sudo nano /lib/systemd/system/x11vnc.service
 
    5- Copy and paste these commands and change the password (yourPassword) to strong password
    this password that request when you use vnc viewer  
@@ -82,25 +75,24 @@ sudo nano /lib/systemd/system/x11vnc.service
     [Install]
     WantedBy=multi-user.target
   
- 6- ``ssh 
-systemctl daemon-reload
-``
+ 6
+   
+    sudo systemctl daemon-reload
+   
 
- 7- ``ssh 
-systemctl enable x11vnc.service
-``
+ 7- to re-enable the service to start up at boot :
+ 
+    sudo systemctl enable x11vnc.service
 
- 8- ``ssh 
-systemctl start x11vnc.service
-``
+ 8- to re-enable the service to start up at boot 
+   
+    sudo systemctl start x11vnc.service
 
- #### check if ssh service is running    
+ #### check if ssh service is running :
 
-   ``ssh 
-systemctl status x11vnc.service
-  ``
+    sudo systemctl status x11vnc.service
 
- #### To use vnc viewer on windoes or other operating system : 
+ #### to use vnc viewer on windoes or other operating system : 
 
     https://www.realvnc.com/en/connect/download/viewer/
 
@@ -110,6 +102,32 @@ systemctl status x11vnc.service
 
 
 ## Nginx
+
+  1- install nginx :
+
+    sudo apt install nginx
+
+  
+ 2-  adjusting the Firewall : 
+
+    sudo ufw allow 'Nginx HTTP'
+
+
+ #### check if ssh service is running    
+    systemctl status nginx
+
+  
+3- to re-enable the service to start up at boot :
+
+    sudo systemctl enable nginx
+
+Managing the Nginx Process : 
+
+    sudo systemctl start nginx
+    sudo systemctl stop  nginx
+    sudo systemctl restart  nginx
+    sudo systemctl reload  nginx
+
 
 
 ## NodeJs
