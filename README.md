@@ -192,7 +192,28 @@ for example: to install MySQL and GD extensions, you would run the following com
 
 ## php composer
 
+1- 
+  
+    sudo apt install php-cli unzip
 
+2- 
+
+    cd ~
+    curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+    HASH=`curl -sS https://composer.github.io/installer.sig`
+
+3- to install composer globally and install Composer as a system-wide command named composer, under /usr/local/bin:
+
+    sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+ #### check if php8 service is running 
+ 
+     systemctl status php8.0-fpm
+      
+ 
+  #### More Info :
+    https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04#step-1-installing-php-and-additional-dependencies
+     
 
 ## MySQL
 
