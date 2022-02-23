@@ -34,13 +34,13 @@ ssh user@server-name
 ```
  #### to check if ssh service is running :     
 ```
-   sudo systemctl status ssh
+sudo systemctl status ssh
 ```
 
 #### More Info :
 ```
-  https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/
- ```  
+https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/
+```  
      
 ## VNC
 
@@ -269,26 +269,31 @@ $ Do you wish to continue with the password provided?(Press y|Y for Yes, any oth
 sudo mysql
 ```    
 
-2- creat any user :
+to creat any user :
 
 ```mysql
 CREATE USER 'username'@'host' IDENTIFIED WITH authentication_plugin BY 'STRONG_PASSWORD_HERE';
 FLUSH PRIVILEGES;
 ``` 
 
-3-  root user : 
+or update root user : 
 
 ```mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'STRONG_PASSWORD_HERE';
 FLUSH PRIVILEGES;
 ``` 
     
-4- to re-enable the service to start up at boot :
+5- to re-enable the service to start up at boot :
 
 ```
-  sudo systemctl enable mysql
+sudo systemctl enable mysql
 ``` 
-  
 
  #### check if mysql service  is running :
-     sudo systemctl status mysql
+```
+sudo systemctl status mysql
+```
+
+## Mote About Ubuntu : 
+
+    https://ubuntu.com/tutorials
