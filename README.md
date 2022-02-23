@@ -12,7 +12,7 @@
 ## Before install 
 
 
-    sudo apt-get install openssh-server
+    sudo apt-get update
 
 
 ## SSH
