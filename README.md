@@ -154,7 +154,7 @@ sudo apt-get install git
 ```  
 git --version
 ```       
-2- to configure your Git username and email using  :
+2- to configure your Git `username` and `email` using  :
 ``` 
  git config --global user.name "Haytham Salama"
  git config --global user.email "haythamasalama@gmail.com"
@@ -163,18 +163,18 @@ git --version
 
 ## PHP 8
 
-1-  install PPA for PHP 8.1 Add the ondrej/php which has PHP 8.1 package and other required PHP extensions
+1-  install PPA for PHP 8.1 Add the `ndrej/php` which has `PHP 8.0` package and other required PHP extensions
   
     sudo apt install software-properties-common
     sudo add-apt-repository ppa:ondrej/php
     
     
-2- install php 8 for nginx : 
+2- install php 8 for `nginx` : 
 
     sudo apt install php8.0-fpm
 
     
-2- install php 8 for Apache :
+2- install php 8 for `Apache` :
 
     sudo apt install php8.0
     
