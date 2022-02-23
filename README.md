@@ -36,28 +36,34 @@ ssh user@server-name
 ```
    sudo systemctl status ssh
 ```
-  #### More Info :
-    https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/
-     
+
+#### More Info :
+```
+  https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/
+ ```  
      
 ## VNC
 
   1- install lightdm :
-   
-    sudo apt install lightdm
-  
-  2- reboot :
+``` 
+sudo apt install lightdm
+```  
 
-    sudo reboot
+  2- reboot :
+  
+```
+sudo reboot
+```
 
  3- install x11vnc :
-
-    sudo apt install x11vnc
-  
+ 
+```
+sudo apt install x11vnc
+```
    4
-  
-    sudo nano /lib/systemd/system/x11vnc.service
-
+``` 
+sudo nano /lib/systemd/system/x11vnc.service
+```
    5- Copy and paste these commands and change the password (yourPassword) to strong password
    this password that request when you use vnc viewer  
    ```
@@ -76,7 +82,7 @@ ssh user@server-name
   ```
  6
 ```   
-    sudo systemctl daemon-reload
+sudo systemctl daemon-reload
 ```   
 
  7- to re-enable the service to start up at boot :
@@ -93,19 +99,19 @@ sudo systemctl start x11vnc.service
 sudo systemctl status x11vnc.service
 ``` 
  #### to use vnc viewer on windoes or other operating system : 
-
-    https://www.realvnc.com/en/connect/download/viewer/
-
+```
+https://www.realvnc.com/en/connect/download/viewer/
+```
 ![image](https://user-images.githubusercontent.com/37311945/155212175-5048fa1b-0d34-4d23-943f-c955e12f0718.png)
-
-    https://www.youtube.com/watch?v=3K1hUwxxYek&ab_channel=DavidBombal
-
+```
+https://www.youtube.com/watch?v=3K1hUwxxYek&ab_channel=DavidBombal
+```
 
 ## Nginx
 
   1- install nginx :
 ```
-    sudo apt install nginx
+sudo apt install nginx
 ```
   
  2-  adjusting the Firewall : 
@@ -130,15 +136,16 @@ sudo systemctl restart  nginx
 sudo systemctl reload  nginx
 ```
   #### More Info :
-       https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04#step-1-installing-nginx
-
+```
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04#step-1-installing-nginx
+```
 
 ## NodeJs
 
   1- install nodejs :
- ```  
+```  
 sudo apt install nodejs
- ```    
+```    
  #### check node version and if it install successfully
 ``` 
 node -v 
@@ -164,13 +171,14 @@ git --version
 ## PHP 8
 
 1-  install PPA for PHP 8.1 Add the `ndrej/php` which has `PHP 8.0` package and other required PHP extensions
- ``` 
+
+``` 
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 ```    
     
 2- install php 8 for `nginx` : 
- ```
+```
 sudo apt install php8.0-fpm
 ```
     
@@ -180,22 +188,23 @@ sudo apt install php8.0
 ```    
 
  #### check if php8 service is running 
- 
-     systemctl status php8.0-fpm
-      
+``` 
+systemctl status php8.0-fpm
+```      
+
 3- to Installing PHP extension :
+
 ```
 sudo apt install php8.0-[extname] 
 ```
 
-for example: to install MySQL, GD,intl, fileinfo and curl extensions, you would run the following command:
+for example to install `MySQL` , `GD` , `intl` , `fileinfo` and `curl` extensions, you would run the following command:
 ```
-  sudo apt install php8.0-gd php8.0-curl php8.0-intl php8.0-fileinfo php8.0-mysql
+sudo apt install php8.0-gd php8.0-curl php8.0-intl php8.0-fileinfo php8.0-mysql
 ```
      
 
 ## php composer
-
 
 1
 ``` 
@@ -204,23 +213,25 @@ sudo apt install php-cli unzip
 
 2-
 ```
-    cd ~
-    curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
-    HASH=`curl -sS https://composer.github.io/installer.sig`
+  cd ~
+  curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+  HASH=`curl -sS https://composer.github.io/installer.sig`
 ```
 3- to install composer globally and install Composer as a system-wide command named composer, under /usr/local/bin:
+
 ```
 sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ```
 
  #### check if composer if it install successfully
- 
-     composer
-      
+```
+composer
+```    
  
   #### More Info :
-    https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04#step-1-installing-php-and-additional-dependencies
-     
+```
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04#step-1-installing-php-and-additional-dependencies
+```   
 
 ## MySQL
 
@@ -255,7 +266,7 @@ $ Do you wish to continue with the password provided?(Press y|Y for Yes, any oth
  mysql :
  
 ```
-    sudo mysql
+sudo mysql
 ```    
 
 2- creat any user :
