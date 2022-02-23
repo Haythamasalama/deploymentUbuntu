@@ -164,43 +164,45 @@ git --version
 ## PHP 8
 
 1-  install PPA for PHP 8.1 Add the `ndrej/php` which has `PHP 8.0` package and other required PHP extensions
-  
-    sudo apt install software-properties-common
-    sudo add-apt-repository ppa:ondrej/php
-    
+ ``` 
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+```    
     
 2- install php 8 for `nginx` : 
-
-    sudo apt install php8.0-fpm
-
+ ```
+sudo apt install php8.0-fpm
+```
     
 2- install php 8 for `Apache` :
+```
+sudo apt install php8.0
+```    
 
-    sudo apt install php8.0
-    
  #### check if php8 service is running 
  
      systemctl status php8.0-fpm
       
 3- to Installing PHP extension :
-            
-            sudo apt install php8.0-[extname] 
-            
-for example: to install MySQL and GD extensions, you would run the following command:
+```
+sudo apt install php8.0-[extname] 
+```
 
-     sudo apt install php8.0-mysql php8.0-gd
- 
+for example: to install MySQL, GD,intl, fileinfo and curl extensions, you would run the following command:
+```
+  sudo apt install php8.0-gd php8.0-curl php8.0-intl php8.0-fileinfo php8.0-mysql
+```
      
 
 ## php composer
 
 
-1- 
+1
 ``` 
 sudo apt install php-cli unzip
 ``` 
 
-2- 
+2-
 ```
     cd ~
     curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
