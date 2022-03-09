@@ -8,6 +8,7 @@
 * PHP 8
 * php composer
 * MySQL
+* Supervisor
 
 ## Before install 
 ```
@@ -292,6 +293,50 @@ sudo systemctl enable mysql
  #### check if mysql service  is running :
 ```
 sudo systemctl status mysql
+```
+
+## Supervisor
+
+```
+sudo apt-get install supervisor
+```
+go to configuration files and create file to sotre your configrtion `file-name.conf` : 
+```
+cd /etc/supervisord.conf
+```
+
+
+
+Example for config laravel queues : 
+
+```
+[program:file-name]
+process_name=%(program_name)s_%(process_num)02d
+command=php /home/html/wwww/project/artisan queue:work sqs --sleep=3 --tries=3 --max-time=3600
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+user=forge
+numprocs=8
+redirect_stderr=true
+stdout_logfile=/home/html/wwww/project/worker.log
+stopwaitsecs=3600
+```
+
+Starting Supervisor : 
+
+```
+sudo supervisorctl reread
+
+sudo supervisorctl update
+
+sudo supervisorctl start file-name:*
+```
+
+more info : 
+```
+http://supervisord.org/index.html
 ```
 
 ## Mote About Ubuntu : 
