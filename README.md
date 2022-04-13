@@ -332,7 +332,7 @@ https://www.realvnc.com/en/connect/download/viewer/
 ![image](https://user-images.githubusercontent.com/37311945/155212175-5048fa1b-0d34-4d23-943f-c955e12f0718.png)
 
 
-> [Vidoe Toturial ](https://www.youtube.com/watch?v=3K1hUwxxYek&ab_channel=DavidBombal)
+> [Video Tutorial](https://www.youtube.com/watch?v=3K1hUwxxYek&ab_channel=DavidBombal)
 
 
 ## [Mote About Ubuntu](https://ubuntu.com/tutorials)
