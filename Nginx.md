@@ -1,17 +1,15 @@
+# Nginx Config Servers  
 
-[VueJs](#vuejs)
-
+- [VueJs](#vue-js)
 
 ## Vue Js 
-
-`root` folder project for example : `/var/www/html/project/dist`
 
 ```
 server {
     listen       80;
     server_name  localhost;
     location / {
-      root   /var/www/html/project/dist;
+      root   /srv/example.com/dist;
       index  index.html;
       try_files $uri $uri/ /index.html;
     }
@@ -21,3 +19,5 @@ server {
     }
 }
 ```
+> [More info](https://cli.vuejs.org/guide/deployment.html#docker-nginx)
+
