@@ -3,7 +3,7 @@
 - [SSH](#ssh)
 - [Nginx](#nginx)
 - [NodeJs](#nodejs)
-- [PHP 8](#php-8)
+- [PHP 8.1](#php-81)
 - [PHP Composer](#php-composer)
 - [MySQL](#mysql)
 - [Supervisor](#supervisor)
@@ -103,47 +103,51 @@ configure your Git `username` and `email` using  :
 ``` 
 
 
-## PHP 8
+## PHP 8.1
 
-1-  install PPA for PHP 8.1 Add the `ndrej/php` which has `PHP 8.0` package and other required PHP extensions
+> if you want to install php `8.0` you can change form `php8.1` to `php8.0-fpm` and all installations to `php8.1` 
+
+1-  install PPA for PHP 8.1 Add the `ndrej/php` which has `PHP 8.1` package and other required PHP extensions
 
 ``` 
 sudo apt install software-properties-common
-sudo add-apt-repository ppa:ondrej/php
 ```    
+```
+sudo add-apt-repository ppa:ondrej/php
+```
     
 2- install php 8 for `nginx` : 
 ```
-sudo apt install php8.0-fpm
+sudo apt install php8.1-fpm
 ```
     
 2- install php 8 for `Apache` :
 ```
-sudo apt install php8.0
+sudo apt install php8.1
 ```    
 
  #### check if php8 service is running 
 ``` 
-systemctl status php8.0-fpm
+systemctl status php8.1-fpm
 ```      
 
 3- to installing PHP extension :
 
 ```
-sudo apt install php8.0-[extname] 
+sudo apt install php8.1-[extname] 
 ```
 
-for example to install `MySQL` , `GD` , `intl` , `fileinfo` and `curl` extensions, you would run the following command:
+for example to install `MySQL` , `GD` , `intl` , `fileinfo` ,`dom` and `curl` extensions, you would run the following command:
 ```
-sudo apt install php8.0-gd php8.0-curl php8.0-intl php8.0-fileinfo php8.0-mysql
+sudo apt install php8.1-gd php8.1-curl php8.1-intl php8.1-fileinfo php8.1-mysql  php8.1-dom
 ```
  or 
 ```
-sudo apt install php8.0-{gd,curl,intl,fileinfo,mysql}
+sudo apt install php8.1-{gd,curl,intl,fileinfo,mysql,dom}
 ```
 
-## php composer
 
+## php composer
 
 ```
 sudo apt install php-cli unzip
@@ -248,7 +252,7 @@ sudo systemctl enable mysql
   ```
   sudo ufw allow from remote_IP_address to any port 3306
   ```
-  or allow `any IP address` on the firewall to connect to the database `However I do not recommend it`
+  or allow `any IP address` on the firewall to connect to the database `which I do not recommend it`
   ```
   sudo ufw allow  3306
   ```
@@ -377,5 +381,4 @@ Pull requests and stars are always welcome.
 Copyright © 2022, [Haytham Salama](https://github.com/haythamasalama).
 Released under the [MIT License](LICENSE).
 
-***
 
