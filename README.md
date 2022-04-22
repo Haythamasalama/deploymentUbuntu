@@ -198,20 +198,18 @@ $ Do you wish to continue with the password provided?(Press y|Y for Yes, any oth
     
 4- Creating a Dedicated MySQL User and Granting Privileges :  
 
- mysql :
- 
 ```
 sudo mysql
 ```    
 
-to creat any user :
+create user :
 
 ```mysql
-CREATE USER 'username'@'host' IDENTIFIED WITH mysql_native_password BY 'STRONG_PASSWORD_HERE';
+CREATE USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'STRONG_PASSWORD_HERE';
 FLUSH PRIVILEGES;
 ``` 
 
-or update any user : 
+update user : 
 
 ```mysql
 ALTER USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'STRONG_PASSWORD_HERE';
@@ -224,10 +222,43 @@ FLUSH PRIVILEGES;
 sudo systemctl enable mysql
 ``` 
 
+
+#### if you went to allow Remote Access to MySQL : 
+
+  1- open config file for mysql 
+  
+  ```
+  sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+  ```
+
+  2- after opend the config file change `bind-address` from `127.0.0.1` to  `0.0.0.0`
+
+  ```
+  . . .
+  lc-messages-dir = /usr/share/mysql
+  skip-external-locking
+  #
+  # Instead of skip-networking the default is now to listen only on
+  # localhost which is more compatible and is not less secure.
+  bind-address            = 0.0.0.0
+  . . .
+  ```
+
+  3- allow specific IP addresses on the firewall to connect to the database
+  ```
+  sudo ufw allow from remote_IP_address to any port 3306
+  ```
+  or allow `any IP address` on the firewall to connect to the database `However I do not recommend it`
+  ```
+  sudo ufw allow  3306
+  ```
+
+
 check if mysql service  is running :
 ```
 sudo systemctl status mysql
 ```
+
 
 ## Supervisor
 
